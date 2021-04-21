@@ -97,7 +97,11 @@ class ATM:
         self.in_service = False
 
 def bank_worker(bank, clients):
+<<<<<<< HEAD
   logging.info("Process started for bank: {}".format(bank.name))
+=======
+  logging.info("\nProcess started for bank: {}".format(bank.name))
+>>>>>>> 6530e9a1d17dcf4ed54ac177fb93ef2bca01efc4
 
   client1, client2 = random.sample(clients, 2)
 
@@ -116,7 +120,11 @@ def bank_worker(bank, clients):
   logging.info(client2)
 
   t = Transaction(25, client2, client2)
+<<<<<<< HEAD
   if t.cash_withdrawal():
+=======
+  if t.cash_withdrawl():
+>>>>>>> 6530e9a1d17dcf4ed54ac177fb93ef2bca01efc4
     logging.info("Client {} {} has made a withdrawl of {} PLN from his account and now has a balance of {} PLN".format(t.recepient.last_name, t.recepient.first_name, t.amount, t.recepient.balance))
   else:
     logging.info("Client {} {} does not have adequate funds to make cash withdrawl.".format(t.recepient.last_name, t.recepient.first_name))
@@ -128,7 +136,11 @@ def bank_worker(bank, clients):
   logging.info(client2)
 
   t = Transaction(50, client2, client2)
+<<<<<<< HEAD
   if t.cash_withdrawal():
+=======
+  if t.cash_withdrawl():
+>>>>>>> 6530e9a1d17dcf4ed54ac177fb93ef2bca01efc4
     logging.info("Client {} {} has made a withdrawl of {} PLN from his account and now has a balance of {} PLN".format(t.recepient.last_name, t.recepient.first_name, t.amount, t.recepient.balance))
   else:
     logging.info("Client {} {} does not have adequate funds to make cash withdrawl.".format(t.recepient.last_name, t.recepient.first_name))
@@ -165,9 +177,17 @@ if __name__ == "__main__":
   p3 = multiprocessing.Process(target=bank_worker, args=(bank3, bank3_clients,))
   p3.start()
 
+<<<<<<< HEAD
   logging.info(client2)
   client2.bank = bank2
   logging.info(client2)
+=======
+  logging.info("\n")
+  logging.info(client2)
+  client2.bank = bank2
+  logging.info(client2)
+  logging.info("\n")
+>>>>>>> 6530e9a1d17dcf4ed54ac177fb93ef2bca01efc4
 
   client2.national_id = "22"
 
