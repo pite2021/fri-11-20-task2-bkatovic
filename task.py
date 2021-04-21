@@ -97,11 +97,7 @@ class ATM:
         self.in_service = False
 
 def bank_worker(bank, clients):
-<<<<<<< HEAD
   logging.info("Process started for bank: {}".format(bank.name))
-=======
-  logging.info("\nProcess started for bank: {}".format(bank.name))
->>>>>>> 6530e9a1d17dcf4ed54ac177fb93ef2bca01efc4
 
   client1, client2 = random.sample(clients, 2)
 
